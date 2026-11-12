@@ -1,0 +1,589 @@
+<!doctype html>
+<html lang="en-ZA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Custom Software Development South Africa | AnastaVora</title>
+<meta name="description" content="AnastaVora builds custom software, business apps and AI automation for South African businesses. Based in the Vaal Triangle, Gauteng. Tell us the dream.">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#0B0B0C">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AnastaVora">
+<meta property="og:locale" content="en_ZA">
+<meta property="og:title" content="AnastaVora. More Than Dreams.">
+<meta property="og:description" content="AnastaVora builds custom software, business apps and AI automation for South African businesses. Based in the Vaal Triangle, Gauteng. Tell us the dream.">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@72..144,800&family=Hanken+Grotesk:wght@400;500;700&display=swap">
+<style>
+/* Layout: a lit object on black. Slogan and dream box on the left, the delivered USB drive on the right, then long rows of proof. */
+:root{
+  color-scheme:dark;
+  --ink:#0B0B0C;
+  --ink-2:#17181B;
+  --line:#34363C;
+  --silver:#B8BCC4;
+  --white:#FFFFFF;
+  --accent:#C2143F;
+  --accent-hover:#D01E4B;
+  --accent-text:#FF7392;
+  --paper-text:#0B0B0C;
+  --paper-muted:#4A4D55;
+  --paper-line:#D5D7DB;
+  --display:"Fraunces","Georgia","Times New Roman",serif;
+  --body:"Hanken Grotesk","Helvetica Neue",Arial,sans-serif;
+  --gutter-l:max(clamp(16px,5vw,72px),env(safe-area-inset-left,0px));
+  --gutter-r:max(clamp(16px,5vw,72px),env(safe-area-inset-right,0px));
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ink);color:var(--white);font-family:var(--body);font-size:18px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,p,ul,ol,dl,dd,figure{margin:0;padding:0}
+ul,ol{list-style:none}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--white);outline-offset:3px}
+.paper :focus-visible{outline-color:var(--paper-text)}
+.wrap{max-width:1360px;margin-inline:auto;padding-left:var(--gutter-l);padding-right:var(--gutter-r)}
+h2{font-family:var(--display);font-weight:800;font-size:clamp(38px,5.4vw,72px);line-height:1.02;letter-spacing:-.015em;text-wrap:balance}
+.label{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--silver)}
+.lead{color:var(--silver);max-width:62ch}
+
+/* Header */
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:22px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:700;font-size:19px;letter-spacing:.01em}
+.brand svg{width:34px;height:34px;flex:none}
+.top nav{display:flex;align-items:center;gap:28px;font-size:16px}
+.top nav a{text-decoration:none;color:var(--silver)}
+.top nav a:hover{color:var(--white)}
+.top nav a.pill{color:var(--white);background:var(--accent);padding:9px 16px;font-weight:700}
+.top nav a.pill:hover{background:var(--accent-hover);color:var(--white)}
+
+/* Hero */
+.hero{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:40px;padding-block:24px 88px;align-items:center}
+.hero-copy{display:flex;flex-direction:column;gap:26px;min-width:0}
+.slogan{font-family:var(--display);font-weight:800;font-size:clamp(68px,10.6vw,160px);line-height:.92;letter-spacing:-.025em}
+.slogan span{display:block}
+h1{font-size:clamp(21px,2.1vw,28px);line-height:1.25;font-weight:500;max-width:30ch;text-wrap:balance}
+.dream{display:flex;flex-direction:column;gap:12px;max-width:640px}
+.dream label{font-family:var(--display);font-weight:800;font-size:clamp(26px,2.6vw,34px);line-height:1.1;color:var(--accent-text)}
+.dream textarea{width:100%;min-height:104px;resize:vertical;background:var(--ink-2);color:var(--white);border:1px solid var(--line);border-radius:2px;padding:14px 16px;font:inherit;font-size:18px}
+.dream textarea::placeholder{color:#8F939B}
+.dream textarea:focus{border-color:var(--accent-text);outline:1px solid var(--accent-text);outline-offset:0}
+.send{display:inline-flex;align-items:center;justify-content:center;gap:10px;align-self:flex-start;min-height:52px;background:var(--accent);color:var(--white);padding:12px 22px;font-weight:700;font-size:18px;text-decoration:none;border:0;cursor:pointer}
+.send:hover{background:var(--accent-hover)}
+.accent{color:var(--accent-text)}
+.next{display:inline-block;margin-top:32px;color:var(--accent-text);font-weight:700;font-size:20px;text-underline-offset:4px}
+.next:hover{color:var(--white)}
+.mid-cta{margin-top:44px}
+.send svg{width:20px;height:20px;flex:none}
+.hint{font-size:15px;color:var(--silver);min-height:1.5em}
+.try{display:flex;flex-wrap:wrap;gap:8px 10px;align-items:center;font-size:15px;color:var(--silver)}
+.try button{background:none;border:1px solid var(--line);color:var(--white);font:inherit;padding:7px 12px;min-height:36px;cursor:pointer;border-radius:2px;text-align:left}
+.try button:hover{border-color:var(--accent-text);color:var(--accent-text)}
+.art{position:relative;aspect-ratio:4/5;width:100%;max-width:520px;justify-self:end;min-width:0}
+.art canvas{position:absolute;inset:0;width:100%;height:100%;display:block;-webkit-mask-image:radial-gradient(ellipse closest-side,#000 64%,transparent 100%);mask-image:radial-gradient(ellipse closest-side,#000 64%,transparent 100%)}
+.art svg.drive{position:absolute;left:50%;top:44%;width:58%;transform:translate(-50%,-50%) rotate(-24deg);filter:brightness(1) drop-shadow(0 18px 40px rgba(255,255,255,.14))}
+.hero-eyebrow{display:flex;align-items:center;gap:10px}
+.hero-eyebrow::before{content:"";width:28px;height:1px;background:var(--silver)}
+
+/* Work */
+.section{padding-block:88px}
+.head{display:flex;flex-direction:column;gap:18px;margin-bottom:48px}
+.row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px 56px;padding-block:36px;border-top:1px solid var(--line)}
+.row:last-child{border-bottom:1px solid var(--line)}
+.row .label{grid-column:1/-1}
+.row h3{font-family:var(--display);font-weight:800;font-size:clamp(28px,3.2vw,44px);line-height:1.08;letter-spacing:-.01em;text-wrap:balance}
+.row p{color:var(--silver);max-width:56ch}
+.row p b{color:var(--white);font-weight:700}
+
+/* What we build */
+.build{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px 40px;margin-top:8px}
+.build li{display:flex;flex-direction:column;gap:6px;min-width:0}
+.build h3{font-size:20px;line-height:1.25}
+.build p{font-size:17px}
+
+/* Paper band */
+.paper{background:var(--white);color:var(--paper-text)}
+.paper .label{color:var(--paper-muted)}
+.paper .lead,.paper p{color:var(--paper-muted)}
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px;counter-reset:s}
+.steps li{display:flex;flex-direction:column;gap:10px;counter-increment:s;min-width:0}
+.steps li::before{content:counter(s);font-family:var(--display);font-weight:800;font-size:60px;line-height:1;color:var(--paper-text)}
+.steps h3{font-size:22px;line-height:1.2}
+.care{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px 72px;margin-top:88px;padding-top:56px;border-top:1px solid var(--paper-line)}
+.care ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 28px;align-content:start}
+.care li{font-weight:500;color:var(--paper-text);padding-left:22px;position:relative}
+.care li::before{content:"";position:absolute;left:0;top:.62em;width:10px;height:2px;background:var(--paper-text)}
+.care>div{display:flex;flex-direction:column;gap:16px}
+
+/* Founders + FAQ */
+.who{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px 72px}
+.who p{color:var(--silver);max-width:56ch}
+.who>div{display:flex;flex-direction:column;gap:14px}
+.faq{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px 72px}
+.faq div{display:flex;flex-direction:column;gap:8px;min-width:0}
+.faq dt{font-weight:700;font-size:20px;line-height:1.3}
+.faq dd{color:var(--silver)}
+
+/* Close */
+.close{display:flex;flex-direction:column;gap:24px;align-items:flex-start;padding-block:96px;border-top:1px solid var(--line)}
+.close h2{font-size:clamp(56px,10vw,150px);line-height:.95;letter-spacing:-.025em}
+footer{border-top:1px solid var(--line);padding-block:32px;font-size:15px;color:var(--silver)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 40px}
+footer p{max-width:60ch}
+footer nav{display:flex;gap:20px}
+
+/* Sticky header */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:40;background:var(--ink)}
+.site-head{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;border-bottom:1px solid transparent;transition:background .3s,border-color .3s}
+.site-head .top{transition:padding .3s}
+.site-head.scrolled{background:rgba(11,11,12,.8);-webkit-backdrop-filter:blur(14px) saturate(140%);backdrop-filter:blur(14px) saturate(140%);border-bottom-color:var(--line)}
+.site-head.scrolled .top{padding-block:12px}
+
+/* Buttons */
+.send,.top nav a.pill{transition:background .2s,translate .2s}
+.send:hover,.top nav a.pill:hover{translate:0 -2px}
+.send{position:relative;overflow:hidden;isolation:isolate}
+.shine::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(110deg,transparent 35%,rgba(255,255,255,.32) 50%,transparent 65%);translate:-120% 0;animation:shine 7s 2.8s infinite}
+.send.shine{background:var(--accent)}
+.send.shine:hover{background:var(--accent-hover)}
+@keyframes shine{0%{translate:-120% 0}16%,100%{translate:120% 0}}
+
+/* Hero entrance */
+.slogan .ln{display:block;overflow:hidden;padding-bottom:.05em;margin-bottom:-.05em}
+.slogan .ln>span{display:block;animation:rise 1s cubic-bezier(.2,.8,.2,1) both}
+.slogan .ln:nth-child(2)>span{animation-delay:.12s}
+.slogan .ln:nth-child(3)>span{animation-delay:.24s}
+.hero-eyebrow,.hero h1,.dream{animation:fadeUp .9s cubic-bezier(.2,.8,.2,1) both}
+.hero h1{animation-delay:.55s}
+.dream{animation-delay:.72s}
+@keyframes rise{from{transform:translateY(105%)}}
+@keyframes fadeUp{from{opacity:0;translate:0 18px}}
+
+/* The drive forms out of the dust */
+.js .art:not(.formed) .drive{opacity:0;animation:showLate 0s 4s forwards}
+.art.formed .drive{animation:materialise 1s cubic-bezier(.2,.8,.2,1) both,float 5s 1.2s ease-in-out infinite alternate}
+@keyframes showLate{to{opacity:1}}
+@keyframes materialise{from{opacity:0;scale:.86;filter:brightness(2.6) drop-shadow(0 0 36px rgba(255,255,255,.7))}}
+@keyframes float{to{translate:0 -10px}}
+
+/* Dream ticker */
+.ticker{overflow:hidden;border-block:1px solid var(--line);padding-block:26px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
+.ticker-track{display:flex;width:max-content;animation:ticker 52s linear infinite}
+.ticker:hover .ticker-track{animation-play-state:paused}
+.ticker ul{display:flex;flex:none}
+.ticker li{display:flex;align-items:center;font-family:var(--display);font-weight:800;font-size:clamp(34px,5.2vw,76px);line-height:1.05;white-space:nowrap;letter-spacing:-.01em}
+.ticker li:nth-child(odd){color:transparent;-webkit-text-stroke:1.2px var(--silver)}
+.ticker li::after{content:"";flex:none;width:10px;height:10px;border-radius:50%;background:var(--silver);opacity:.55;margin-inline:clamp(24px,3vw,44px)}
+@keyframes ticker{to{transform:translateX(-50%)}}
+
+/* Work rows and build grid */
+.row{position:relative}
+.row::before{content:"";position:absolute;left:0;right:0;top:-1px;height:1px;background:var(--white);scale:0 1;transform-origin:left;transition:scale .6s cubic-bezier(.2,.8,.2,1)}
+.row:hover::before{scale:1 1}
+.row h3{transition:translate .4s cubic-bezier(.2,.8,.2,1)}
+.row:hover h3{translate:8px 0}
+.build{gap:0 40px}
+.build li{position:relative;gap:10px;padding-block:26px 34px;border-top:1px solid var(--line)}
+.build li::before{content:"";position:absolute;left:0;right:0;top:-1px;height:1px;background:var(--white);scale:0 1;transform-origin:left;transition:scale .6s cubic-bezier(.2,.8,.2,1)}
+.build li:hover::before{scale:1 1}
+.build .ic{width:30px;height:30px;fill:none;stroke:var(--silver);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;transition:stroke .3s,translate .3s}
+.build li:hover .ic{stroke:var(--white);translate:0 -3px}
+
+/* Steps line */
+.steps{position:relative}
+.steps::before,.steps::after{content:"";position:absolute;left:0;right:0;top:29px;height:2px;background:var(--paper-line)}
+.steps::after{background:var(--paper-text);transform-origin:left}
+.steps li{position:relative;z-index:1}
+.steps li::before{align-self:flex-start;background:var(--white);padding-right:16px}
+
+/* Reveal on scroll, where the browser supports scroll-driven animation */
+@supports (animation-timeline:view()){
+  .head,.row,.build li,.steps li,.care,.who>div,.faq>div,.close h2,.next,.mid-cta{animation:reveal linear both;animation-timeline:view();animation-range:entry 0% cover 24%}
+  .steps::after{animation:grow linear both;animation-timeline:view();animation-range:entry 30% cover 50%}
+}
+@keyframes reveal{from{opacity:.3;translate:0 34px}}
+@keyframes grow{from{scale:0 1}}
+
+@media (max-width:980px){
+  .steps::before,.steps::after{display:none}
+  .hero{grid-template-columns:minmax(0,1fr);padding-bottom:64px}
+  .art{order:-1;max-width:300px;aspect-ratio:1/1;justify-self:center;margin-block:-8px -24px}
+  .art svg.drive{width:50%;top:50%}
+  .steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .build{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .care,.who,.faq,.row{grid-template-columns:minmax(0,1fr)}
+  .section{padding-block:64px}
+  .care{margin-top:56px}
+}
+@media (max-width:620px){
+  body{font-size:17px}
+  .top nav a:not(.pill){display:none}
+  .steps,.build,.care ul{grid-template-columns:minmax(0,1fr)}
+  .send{align-self:stretch}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js .art .drive{opacity:1}
+  .ticker{-webkit-mask-image:none;mask-image:none}
+}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "AnastaVora", "slogan": "More Than Dreams", "description": "AnastaVora builds custom software, business apps and AI automation for South African businesses. Based in the Vaal Triangle, Gauteng. Tell us the dream.", "address": {"@type": "PostalAddress", "addressRegion": "Gauteng", "addressCountry": "ZA"}, "areaServed": {"@type": "Country", "name": "South Africa"}, "sameAs": ["https://www.instagram.com/anastavora/", "https://www.tiktok.com/@anastavora"], "makesOffer": [{"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Custom software development"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Business app development"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Lead generation software"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "AI automation"}}]}</script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <path id="mark" fill="currentColor" fill-rule="evenodd" d="M37.6 85.7L37.8 86.1L38.3 86.5L41.0 87.5L44.7 88.4L48.6 88.8L51.6 88.9L55.2 88.4L56.5 88.2L59.8 87.3L61.7 86.6L62.4 86.2L62.7 85.7L62.6 85.4L59.7 83.0L59.2 82.8L58.3 82.8L55.5 83.5L53.7 83.8L50.0 84.0L47.8 83.9L45.1 83.6L44.3 83.5L42.9 83.0L41.2 82.7L40.8 82.8L40.3 83.1L37.8 85.4ZM56.5 61.2L56.5 61.9L56.6 62.1L56.9 62.2L60.3 62.2L61.9 62.3L64.1 62.6L65.3 62.9L67.6 63.3L69.7 64.0L72.4 65.0L73.2 65.4L73.7 65.5L74.3 65.4L74.5 65.1L74.7 63.7L75.2 62.7L75.4 62.0L75.3 61.5L75.2 61.1L74.9 60.8L74.5 60.5L73.9 60.2L72.5 59.6L70.1 58.8L66.6 57.8L65.0 57.6L62.6 57.1L60.1 56.9L59.4 57.0L58.9 57.2L58.3 58.2L57.1 60.3L56.6 60.9ZM49.3 59.0L49.0 58.5L47.8 57.8L46.2 57.5L44.6 57.0L43.1 56.9L39.0 56.9L35.7 57.2L32.3 57.9L30.6 58.4L29.4 58.7L25.7 60.2L25.2 60.6L24.9 61.1L24.9 61.8L25.0 63.0L25.1 63.6L25.5 64.3L25.8 65.2L26.0 65.4L26.3 65.5L26.9 65.4L27.8 64.9L29.6 64.2L32.3 63.3L35.7 62.5L38.4 62.3L41.0 62.2L44.2 62.5L45.7 62.9L46.3 62.9L46.9 62.7L47.6 61.8L49.2 59.6L49.3 59.3ZM51.2 68.6L51.0 69.3L51.1 70.2L52.8 73.0L53.6 74.4L55.2 76.7L57.4 79.6L58.3 80.5L61.2 83.6L63.1 85.1L63.9 85.5L65.4 86.6L67.1 87.7L69.4 89.0L72.9 90.5L74.3 90.9L75.7 91.3L79.4 92.2L83.8 92.8L85.4 92.9L88.1 92.9L91.3 92.5L93.7 92.1L95.4 91.5L95.7 91.3L95.9 91.1L96.0 90.4L95.7 87.7L94.9 83.9L94.4 82.6L94.1 81.4L93.3 79.4L91.7 76.2L90.1 73.5L89.3 72.3L87.6 70.2L85.9 68.3L84.0 66.5L82.5 65.2L82.0 65.0L81.2 65.0L80.9 64.8L80.9 64.4L80.9 63.5L81.4 60.1L81.4 57.7L80.8 53.7L80.6 53.1L80.3 52.9L80.0 52.8L79.7 52.8L78.8 53.2L78.4 53.2L78.1 53.1L77.5 52.5L77.0 52.2L76.6 52.1L76.4 52.3L76.4 52.6L76.6 53.4L76.3 54.9L76.4 56.9L76.4 59.0L76.3 60.4L76.0 62.7L74.5 67.3L73.7 69.2L72.9 70.7L71.2 73.4L70.4 74.5L68.9 76.2L66.3 78.9L66.1 79.2L66.1 79.6L66.3 79.9L66.7 80.4L67.7 81.2L68.9 82.0L69.3 82.0L69.7 81.9L70.9 81.1L72.7 79.4L73.4 78.6L76.1 75.0L77.3 73.0L78.3 71.3L78.8 70.1L79.3 69.2L79.6 68.2L79.8 67.9L80.0 67.8L80.1 67.9L80.1 68.1L80.1 69.2L80.3 69.9L83.0 72.5L84.3 74.1L86.1 76.6L87.1 78.2L87.9 79.7L88.7 81.5L89.4 83.3L90.3 86.1L90.3 86.9L90.2 87.2L89.9 87.4L89.5 87.6L88.3 87.7L84.7 87.6L82.4 87.4L78.1 86.7L75.3 85.9L74.3 85.4L73.2 85.1L71.7 84.4L69.7 83.3L69.0 82.8L68.3 82.3L67.5 81.8L64.7 79.6L62.9 77.9L60.7 75.4L59.0 73.2L56.6 69.5L54.7 66.1L54.3 65.7L53.8 65.5L53.4 65.7L52.0 67.4ZM63.3 37.3L62.3 36.5L61.6 36.2L60.8 35.7L60.0 35.5L59.4 35.1L59.1 35.1L58.9 35.1L58.5 35.5L58.3 36.2L58.3 38.2L58.0 41.2L57.2 44.5L56.6 46.3L56.3 47.7L55.9 48.5L55.6 49.6L54.7 51.8L53.3 54.7L52.4 56.3L50.9 58.8L46.6 64.9L46.0 65.8L45.2 67.0L42.9 70.6L41.3 73.0L39.9 75.0L37.2 78.0L35.8 79.4L35.0 80.0L34.2 80.5L33.5 81.2L32.5 81.9L31.8 82.2L31.0 82.9L28.4 84.3L26.7 85.1L24.5 85.9L23.1 86.3L22.0 86.7L17.2 87.5L15.6 87.6L11.7 87.7L10.4 87.5L10.1 87.2L9.9 86.9L9.9 86.3L10.1 85.3L11.0 82.6L12.5 79.1L14.1 76.4L15.0 75.1L16.2 73.6L17.2 72.4L19.8 69.9L20.1 69.4L20.3 68.7L20.5 68.6L20.7 68.7L20.9 69.0L21.3 70.1L22.9 73.1L25.0 76.3L27.6 79.5L29.1 80.9L29.9 81.6L30.6 82.0L31.0 82.0L31.3 82.0L33.9 80.1L34.2 79.8L34.3 79.6L34.3 79.1L34.0 78.7L31.5 76.3L29.9 74.7L28.3 72.5L26.7 69.7L25.8 67.7L25.2 66.1L24.8 64.5L24.3 63.3L24.2 62.3L24.2 61.4L23.8 59.7L23.7 58.7L23.7 57.3L23.9 55.8L24.3 53.1L25.1 50.3L25.5 49.3L25.9 47.9L26.6 46.6L27.5 45.1L30.3 41.5L32.0 39.7L34.7 37.6L35.5 37.0L35.9 36.4L36.0 36.1L36.1 33.0L36.2 32.1L36.0 31.5L35.7 31.2L35.2 31.2L32.9 32.5L30.3 34.2L28.2 36.0L26.8 37.5L25.0 39.7L23.6 41.5L22.8 42.7L22.1 43.9L21.2 45.8L20.5 47.6L19.7 49.8L18.8 53.2L18.6 55.3L18.5 57.2L18.6 60.1L18.9 62.3L19.3 63.7L19.4 64.9L19.3 65.5L19.2 65.6L19.1 65.6L18.4 65.1L18.0 65.1L17.0 65.9L15.3 67.4L13.3 69.5L11.8 71.2L10.2 73.4L8.6 75.8L7.9 77.1L7.1 78.9L5.5 83.0L4.8 85.4L4.5 87.2L4.1 90.3L4.1 90.9L4.3 91.2L4.9 91.5L7.0 92.1L10.5 92.7L12.6 92.9L16.3 92.9L20.0 92.4L22.0 92.1L23.1 91.7L24.8 91.4L26.0 90.9L27.0 90.6L29.1 89.7L30.9 88.9L33.6 87.4L35.7 86.0L37.0 85.2L39.9 82.8L42.9 79.7L45.3 76.4L47.6 73.1L49.6 69.7L50.7 68.3L51.2 67.5L55.5 61.5L57.1 59.1L57.5 58.2L58.0 57.5L60.2 52.6L61.0 50.5L61.8 48.1L62.1 46.8L62.5 45.5L63.3 41.6L63.5 40.0L63.6 38.2L63.4 37.6ZM49.5 7.4L47.4 9.1L44.9 11.7L43.3 13.8L41.8 16.2L41.2 17.3L40.1 19.4L38.6 23.2L38.2 24.7L37.7 26.3L37.1 29.5L36.9 30.6L36.6 31.7L36.5 35.9L36.7 37.5L36.7 38.6L37.0 41.6L37.7 45.1L38.2 46.9L38.5 48.2L39.4 50.5L40.9 54.1L41.7 55.6L42.1 56.0L42.5 56.1L44.4 56.3L46.9 56.8L47.7 56.8L48.0 56.8L48.1 56.6L47.9 56.1L47.0 54.6L45.7 52.2L44.8 50.3L44.0 48.1L43.7 46.9L43.2 45.3L42.4 41.6L42.1 38.2L42.0 34.5L42.2 33.4L42.4 33.1L42.6 32.9L43.4 33.3L43.8 33.3L48.3 32.6L51.3 32.6L53.7 32.9L56.4 33.4L58.6 34.1L59.0 34.3L59.7 34.7L60.7 35.0L61.5 35.4L62.3 35.8L63.0 36.2L64.1 36.8L66.0 38.1L67.8 39.7L68.9 40.9L69.8 41.9L70.0 42.3L70.1 43.0L70.2 44.7L70.3 45.7L70.8 47.7L71.5 48.7L72.8 50.3L73.8 52.3L74.1 52.8L74.4 53.0L74.9 53.2L75.1 53.2L75.3 53.1L75.4 52.9L75.4 52.4L75.1 51.5L75.1 51.0L75.3 50.5L75.7 50.3L76.2 50.4L77.1 51.2L78.5 52.1L79.0 52.3L79.6 52.2L79.9 51.8L80.1 51.1L80.2 50.3L80.1 49.5L79.9 48.6L79.2 46.3L78.3 44.3L77.3 43.0L75.5 41.6L73.5 38.3L72.0 36.6L71.0 35.7L69.5 34.4L67.3 32.8L64.3 31.1L61.9 29.9L61.1 29.4L59.7 29.1L58.5 28.6L56.9 28.3L55.7 28.0L53.0 27.7L49.6 27.6L45.7 27.9L44.4 28.0L43.5 28.4L43.3 28.3L43.2 28.2L43.0 27.6L43.2 26.8L44.1 24.1L44.8 22.4L45.6 20.9L47.1 18.4L48.8 16.1L49.6 15.1L49.8 14.9L50.2 14.8L50.4 14.9L50.8 15.1L51.6 16.0L53.2 18.2L54.1 19.6L55.6 22.4L56.4 24.3L56.8 25.8L57.5 27.5L57.8 27.8L58.6 28.0L59.4 28.4L60.7 28.7L61.7 29.3L62.3 29.2L62.6 29.1L62.7 28.9L62.8 28.4L62.6 27.7L61.7 24.3L61.0 21.8L60.3 19.8L59.5 18.1L58.6 16.3L58.0 15.2L57.0 13.8L55.4 11.8L53.8 10.0L52.2 8.4L51.0 7.4L50.6 7.2L50.0 7.2ZM74.6 45.2L75.0 45.1L75.2 45.2L75.6 45.5L76.0 45.9L76.2 46.3L76.2 46.6L76.1 46.9L75.9 47.1L75.7 47.2L75.3 47.1L75.0 46.9L74.7 46.6L74.5 46.2L74.4 45.7L74.5 45.4Z"/>
+    <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F4F5F7"/><stop offset=".45" stop-color="#A6AAB2"/><stop offset="1" stop-color="#E4E6EA"/></linearGradient>
+    <linearGradient id="body" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2A2B30"/><stop offset=".55" stop-color="#121316"/><stop offset="1" stop-color="#050506"/></linearGradient>
+  </defs>
+</svg>
+
+<header class="site-head" id="siteHead">
+  <div class="wrap top">
+    <a class="brand" href="#top" aria-label="AnastaVora home"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#mark"/></svg>AnastaVora</a>
+    <nav aria-label="Main">
+      <a href="#work">Our work</a>
+      <a href="#how">How it works</a>
+      <a href="#faq">Questions</a>
+      <a class="pill js-wa" href="https://wa.me/" target="_blank" rel="noopener">WhatsApp us</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <script>document.documentElement.classList.add('js')</script>
+  <section class="wrap hero" id="hero">
+    <div class="hero-copy">
+      <p class="label hero-eyebrow">Custom software studio, Gauteng</p>
+      <p class="slogan"><span class="ln"><span>More</span></span><span class="ln"><span>Than</span></span><span class="ln"><span>Dreams.</span></span></p>
+      <h1>Custom software for South African businesses, built and looked after by us.</h1>
+      <form class="dream" id="dreamForm">
+        <label for="dreamText">What's the dream?</label>
+        <textarea id="dreamText" name="dream" maxlength="600" placeholder="Tell us what you wish your business had."></textarea>
+        <div class="try" aria-label="Example dreams">
+          <span>Try one:</span>
+          <button type="button" data-d="Get my team off WhatsApp and spreadsheets and into one app.">One app for my team</button>
+          <button type="button" data-d="Wake up to a fresh list of new clients every morning.">New clients every morning</button>
+          <button type="button" data-d="Send quotes and invoices from my phone.">Quotes from my phone</button>
+        </div>
+        <a class="send shine" id="dreamSend" href="https://wa.me/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.9 5-1.3A10 10 0 1 0 12 2zm5.5 13.9c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.5-.6-2.7-1.2-4.4-3.9-4.6-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 .9-2.2c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.1.1.3 0 .5l-.3.5-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.1.1.6-.1 1.1z"/></svg>
+          Send my dream on WhatsApp
+        </a>
+        <p class="hint" id="dreamHint" role="status"></p>
+      </form>
+    </div>
+    <div class="art" aria-hidden="true">
+      <canvas id="dust"></canvas>
+      <svg class="drive" viewBox="0 0 200 360">
+        <rect x="58" y="4" width="84" height="100" rx="3" fill="url(#metal)"/>
+        <rect x="74" y="26" width="18" height="18" fill="#0B0B0C"/><rect x="108" y="26" width="18" height="18" fill="#0B0B0C"/>
+        <rect x="30" y="96" width="140" height="260" rx="10" fill="url(#body)" stroke="#55585F" stroke-width="1.5"/>
+        <svg x="50" y="160" width="100" height="100" viewBox="0 0 100 100" color="#F2F3F5"><use href="#mark"/></svg>
+      </svg>
+    </div>
+  </section>
+
+  <div class="ticker" aria-label="Dreams we hear from businesses">
+    <div class="ticker-track">
+      <ul>
+        <li>One app for my whole team</li>
+        <li>New clients every morning</li>
+        <li>Quotes from my phone</li>
+        <li>Every policy signed, with proof</li>
+        <li>Bookings that run themselves</li>
+        <li>Stock I can check from anywhere</li>
+      </ul>
+      <ul aria-hidden="true">
+        <li>One app for my whole team</li>
+        <li>New clients every morning</li>
+        <li>Quotes from my phone</li>
+        <li>Every policy signed, with proof</li>
+        <li>Bookings that run themselves</li>
+        <li>Stock I can check from anywhere</li>
+      </ul>
+    </div>
+  </div>
+
+  <section class="wrap section" id="work">
+    <div class="head">
+      <p class="label">Our work</p>
+      <h2>Dreams we've turned into working software.</h2>
+    </div>
+    <article class="row">
+      <p class="label">Cupboard manufacturer · Lead generation software</p>
+      <h3>"New clients waiting for us every morning."</h3>
+      <p><b>What we built:</b> a lead engine that tracks property deeds, new developments and big building projects, then gives the team a daily list with the location, contact details and company background.</p>
+    </article>
+    <article class="row">
+      <p class="label">Social media agency · Team management app</p>
+      <h3>"Run the whole team from one place."</h3>
+      <p><b>What we built:</b> a digital office with team chat, client boards, content calendars and live productivity tracking, made in the agency's own look.</p>
+    </article>
+    <article class="row">
+      <p class="label">Group of companies · Staff compliance app</p>
+      <h3>"Every staff member signs every policy, with proof."</h3>
+      <p><b>What we built:</b> a policy app where staff sign on screen and give POPIA consent, with a printable history for each person. Designed for about 3,000 users.</p>
+    </article>
+    <a class="next" href="#dreamText">Got a dream of your own? Tell us.</a>
+  </section>
+
+  <section class="wrap section" id="build" style="padding-top:0">
+    <div class="head">
+      <p class="label">What we build</p>
+      <h2>If your business needs it, we can build it.</h2>
+      <p class="lead">AnastaVora does custom software development for South African businesses. We're based in the Vaal Triangle, Gauteng, and can work with businesses anywhere in the country. Here are some of the things we make.</p>
+    </div>
+    <ul class="build">
+      <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M7 6.5h.01M10 6.5h.01"/></svg><h3>Custom web apps</h3><p class="lead">Software shaped around how your business actually runs.</p></li>
+      <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg><h3>Business apps for your phone</h3><p class="lead">Tools your team opens on mobile or desktop.</p></li>
+      <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg><h3>Lead generation systems</h3><p class="lead">Fresh prospects found and delivered automatically.</p></li>
+      <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 3l1.9 5.6 5.6 1.9-5.6 1.9L11 18l-1.9-5.6-5.6-1.9 5.6-1.9z"/><path d="M19 15v5M16.5 17.5h5"/></svg><h3>AI assistants and automation</h3><p class="lead">The repetitive work, handled by software.</p></li>
+      <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7.5 3v5.5c0 4.6-3.2 8.3-7.5 9.5-4.3-1.2-7.5-4.9-7.5-9.5V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg><h3>Staff and compliance tools</h3><p class="lead">Policies, sign-offs, tracking and reports.</p></li>
+      <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20.5h18M6 17v-5M11 17V6M16 17v-8"/></svg><h3>Dashboards and business websites</h3><p class="lead">Your numbers in one view, and a site that brings in work.</p></li>
+    </ul>
+  </section>
+
+  <div class="paper">
+    <section class="wrap section" id="how">
+      <div class="head">
+        <p class="label">How it works</p>
+        <h2>From idea to working software in four steps.</h2>
+      </div>
+      <ol class="steps">
+        <li><h3>Tell us the dream</h3><p>Send a WhatsApp in your own words. No technical language needed.</p></li>
+        <li><h3>See it working</h3><p>We show you a working demo, so you can judge the real thing.</p></li>
+        <li><h3>We build it</h3><p>We finish it around your team, your process and your colours.</p></li>
+        <li><h3>We keep it running</h3><p>Hosting, fixes and small changes stay with us after launch.</p></li>
+      </ol>
+      <div class="mid-cta"><a class="send js-wa" href="https://wa.me/" target="_blank" rel="noopener">Start with a WhatsApp</a></div>
+      <div class="care">
+        <div>
+          <p class="label">Looked after</p>
+          <h2>Launch day is where our job starts.</h2>
+          <p>Pricing depends on what you need. We keep it fair, and you'll know the cost before any work starts.</p>
+        </div>
+        <ul>
+          <li>Hosting</li>
+          <li>Updates and fixes</li>
+          <li>Small monthly edits</li>
+          <li>Secure logins</li>
+          <li>Mobile and desktop</li>
+          <li>Your look and colours</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+
+  <section class="wrap section who" id="who">
+    <div>
+      <p class="label">Who's building it</p>
+      <h2>Two founders. Real software.</h2>
+    </div>
+    <div>
+      <p>AnastaVora was started by Basil Nunes and Jayden Retief in the Vaal Triangle, Gauteng.</p>
+      <p>When you work with us, you talk directly to the people writing your software. We use AI to build faster, and we stay responsible for what we hand over.</p>
+    </div>
+  </section>
+
+  <section class="wrap section" id="faq" style="padding-top:0">
+    <div class="head">
+      <p class="label">Questions</p>
+      <h2>What people ask first.</h2>
+    </div>
+    <dl class="faq">
+      <div><dt>How much does custom software cost in South Africa?</dt><dd>It depends on what the software has to do. Tell us the dream and we'll give you a clear, fair price before any work starts.</dd></div>
+      <div><dt>What kind of software can you build?</dt><dd>Web apps, business apps, lead generation systems, AI automation, staff tools, dashboards and websites. If you can describe it, ask us.</dd></div>
+      <div><dt>Do I need to understand technology?</dt><dd>No. Explain the problem the way you'd explain it to a friend, and we'll work out the technical side.</dd></div>
+      <div><dt>What happens after the software goes live?</dt><dd>We host it, fix it and keep it updated. Small changes are part of the service, and bigger features are quoted separately.</dd></div>
+      <div><dt>Do you only work in Gauteng?</dt><dd>We're based in the Vaal Triangle, and everything we build runs online, so we can work with businesses across South Africa.</dd></div>
+      <div><dt>Can you handle personal information properly?</dt><dd>Yes. Where an app holds personal information, we build in secure logins and POPIA consent from the start.</dd></div>
+    </dl>
+  </section>
+
+  <section class="wrap close">
+    <h2>What's the <span class="accent">dream?</span></h2>
+    <a class="send shine js-wa" href="https://wa.me/" target="_blank" rel="noopener">Tell us on WhatsApp</a>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>AnastaVora · Custom software, Vaal Triangle, Gauteng, South Africa. If you message us, we use what you send only to reply and to discuss your project.</p>
+    <nav aria-label="Social">
+      <a href="https://www.instagram.com/anastavora/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.tiktok.com/@anastavora" target="_blank" rel="noopener">TikTok</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+(function () {
+  // Put the business number here in international format, digits only, e.g. 27821234567.
+  var WHATSAPP_NUMBER = '27840261591'; // Basil Nunes, 084 026 1591
+  var base = 'https://wa.me/' + WHATSAPP_NUMBER;
+  var GENERAL = 'Hi AnastaVora, I have a dream for my business.';
+
+  function link(text) { return base + '?text=' + encodeURIComponent(text); }
+
+  document.querySelectorAll('.js-wa').forEach(function (a) { a.href = link(GENERAL); });
+
+  var box = document.getElementById('dreamText');
+  var send = document.getElementById('dreamSend');
+  var hint = document.getElementById('dreamHint');
+
+  function sync() {
+    var v = box.value.trim();
+    send.href = v ? link('Hi AnastaVora, here is my dream: ' + v) : link(GENERAL);
+    if (v) hint.textContent = '';
+  }
+  box.addEventListener('input', sync);
+  document.querySelectorAll('.try button').forEach(function (b) {
+    b.addEventListener('click', function () { box.value = b.dataset.d; sync(); box.focus(); });
+  });
+  send.addEventListener('click', function (e) {
+    if (!box.value.trim()) {
+      e.preventDefault();
+      hint.textContent = 'Type your dream first, even one line is enough.';
+      box.focus();
+    }
+  });
+  document.getElementById('dreamForm').addEventListener('submit', function (e) { e.preventDefault(); });
+  sync();
+
+  var still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Header gets a glass background once the page scrolls.
+  var head = document.getElementById('siteHead');
+  function onScroll() { head.classList.toggle('scrolled', window.scrollY > 12); }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // The dream box types out example dreams until someone starts writing.
+  var STATIC = 'Tell us what you wish your business had.';
+  var DREAMS = [
+    'I wish my team ran from one app.',
+    'I wish new clients found us every morning.',
+    'I wish I could send quotes from my phone.',
+    'I wish every staff member signed our policies online.'
+  ];
+  var di = 0, ci = 0, erasing = false;
+  function type() {
+    if (document.activeElement === box || box.value) { box.placeholder = STATIC; ci = 0; erasing = false; setTimeout(type, 700); return; }
+    var s = DREAMS[di];
+    if (!erasing) {
+      ci++; box.placeholder = s.slice(0, ci);
+      if (ci >= s.length) { erasing = true; setTimeout(type, 1900); return; }
+      setTimeout(type, 45);
+    } else {
+      ci--; box.placeholder = s.slice(0, ci) || ' ';
+      if (ci <= 0) { erasing = false; di = (di + 1) % DREAMS.length; setTimeout(type, 350); return; }
+      setTimeout(type, 20);
+    }
+  }
+  if (!still) setTimeout(type, 1500);
+
+  // Dream dust gathers into the drive, then settles into a trail you can push around.
+  var art = document.querySelector('.art');
+  var hero = document.getElementById('hero');
+  var c = document.getElementById('dust');
+  var ctx = c.getContext('2d');
+  var narrow = window.matchMedia('(max-width:980px)');
+  var seed = 7;
+  function rnd() { seed = (seed * 16807) % 2147483647; return (seed - 1) / 2147483646; }
+  function gauss() { return (rnd() + rnd() + rnd() - 1.5) / 1.5; }
+  function clamp(t) { return t < 0 ? 0 : t > 1 ? 1 : t; }
+  function ease(t) { return t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2; }
+  var FORM = 1.7;
+  var trail = [], core = [];
+  for (var i = 0; i < 1500; i++) {
+    var q = Math.pow(rnd(), .75), spread = .03 + .16 * (1 - q);
+    trail.push({
+      hx: .04 + .46 * q + gauss() * spread, hy: 1.0 - .56 * q + gauss() * spread,
+      sx: -.3 + rnd() * 1.6, sy: -.25 + rnd() * 1.5, d: rnd(),
+      r: .4 + rnd() * rnd() * 2.1, a: .18 + rnd() * .75, p: rnd() * 6.28, s: .4 + rnd() * 1.6,
+      ox: 0, oy: 0, vx: 0, vy: 0
+    });
+  }
+  for (var j = 0; j < 700; j++) {
+    var plug = rnd() < .15;
+    core.push({
+      u: plug ? 60 + rnd() * 80 : 34 + rnd() * 132, v: plug ? 8 + rnd() * 92 : 100 + rnd() * 252,
+      sx: -.3 + rnd() * 1.6, sy: -.25 + rnd() * 1.5, d: rnd() * .55,
+      r: .5 + rnd() * 1.4, a: .35 + rnd() * .6
+    });
+  }
+  var w = 0, h = 0, cx = 0, cy = 0, sc = 1;
+  var COS = Math.cos(-24 * Math.PI / 180), SIN = Math.sin(-24 * Math.PI / 180);
+  function size() {
+    var d = Math.min(window.devicePixelRatio || 1, 2);
+    var b = c.getBoundingClientRect();
+    w = b.width; h = b.height;
+    c.width = Math.round(w * d); c.height = Math.round(h * d);
+    ctx.setTransform(d, 0, 0, d, 0, 0);
+    var n = narrow.matches;
+    cx = .5 * w; cy = (n ? .5 : .44) * h; sc = (n ? .5 : .58) * w / 200;
+  }
+  var mx = -1e4, my = -1e4;
+  hero.addEventListener('pointermove', function (e) { var b = c.getBoundingClientRect(); mx = e.clientX - b.left; my = e.clientY - b.top; });
+  hero.addEventListener('pointerleave', function () { mx = my = -1e4; });
+
+  var t0 = null, formed = false;
+  function dot(x, y, r, a, col) { ctx.globalAlpha = a; ctx.fillStyle = col; ctx.beginPath(); ctx.arc(x, y, r, 0, 6.29); ctx.fill(); }
+  function draw(ms) {
+    if (t0 === null) t0 = ms;
+    var t = still ? 99 : (ms - t0) / 1000;
+    if (!formed && t >= FORM) { formed = true; art.classList.add('formed'); }
+    ctx.clearRect(0, 0, w, h);
+
+    var glow = .13 * clamp((t - FORM + .5) / .8) + (t > FORM ? .3 * Math.max(0, 1 - (t - FORM) / .9) : 0);
+    if (glow > 0) {
+      var g = ctx.createRadialGradient(cx, cy, 0, cx, cy, w * .5);
+      g.addColorStop(0, 'rgba(255,255,255,' + glow.toFixed(3) + ')'); g.addColorStop(1, 'rgba(255,255,255,0)');
+      ctx.globalAlpha = 1; ctx.fillStyle = g; ctx.fillRect(0, 0, w, h);
+    }
+
+    if (t < FORM + .4) {
+      var fade = 1 - clamp((t - FORM + .1) / .4);
+      for (var i = 0; i < core.length; i++) {
+        var p = core[i];
+        var k = ease(clamp((t - p.d) / (FORM - p.d)));
+        var dx = (p.u - 100) * sc, dy = (p.v - 180) * sc;
+        var tx = cx + dx * COS - dy * SIN, ty = cy + dx * SIN + dy * COS;
+        dot(p.sx * w + (tx - p.sx * w) * k, p.sy * h + (ty - p.sy * h) * k, p.r * (1 - .4 * k), p.a * clamp(t * 2) * fade, '#FFFFFF');
+      }
+    }
+
+    for (var n = 0; n < trail.length; n++) {
+      var s = trail[n];
+      var m = ease(clamp((t - .3 - s.d * .7) / 1.8));
+      var x = s.sx * w + (s.hx * w - s.sx * w) * m + Math.sin(t * .5 * s.s + s.p) * 2 * m;
+      var y = s.sy * h + (s.hy * h - s.sy * h) * m + Math.cos(t * .4 * s.s + s.p) * 2 * m;
+      if (formed) {
+        var ex = x + s.ox - mx, ey = y + s.oy - my, d2 = ex * ex + ey * ey;
+        if (d2 < 6400) { var dd = Math.sqrt(d2) + .01, f = (1 - dd / 80) * 1.8; s.vx += ex / dd * f; s.vy += ey / dd * f; }
+        s.vx = (s.vx - s.ox * .035) * .88; s.vy = (s.vy - s.oy * .035) * .88;
+        s.ox += s.vx; s.oy += s.vy;
+      }
+      var tw = still ? 1 : .55 + .45 * Math.sin(t * s.s + s.p);
+      dot(x + s.ox, y + s.oy, s.r, s.a * tw * Math.min(1, .2 + m), s.r > 1.7 ? '#FFFFFF' : '#B8BCC4');
+    }
+    ctx.globalAlpha = 1;
+  }
+  var visible = true, running = false;
+  function loop(ms) { if (!visible) { running = false; return; } draw(ms); requestAnimationFrame(loop); }
+  function start() { if (!running && !still) { running = true; requestAnimationFrame(loop); } }
+  size();
+  if (still) draw(0); else start();
+  window.addEventListener('resize', function () { size(); if (still) draw(0); });
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function (e) { visible = e[0].isIntersecting; if (visible) start(); }).observe(c);
+  }
+})();
+</script>
+</body>
+</html>
